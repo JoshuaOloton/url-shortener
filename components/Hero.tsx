@@ -2,7 +2,7 @@ import Button from "./Button"
 
 const Hero = () => {
   return (
-    <div className="text-gray900 h-screen">
+    <div className="text-gray900 mb-20 pb-10">
       <div className="w-full overflow-hidden my-5">
         <img src="/assets/illustration-working.svg" alt="Hero image" className="w-[150%] max-w-none"/>
       </div>

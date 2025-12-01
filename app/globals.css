@@ -23,5 +23,4 @@ body {
   color: var(--foreground);
   font-family: var(--font-poppins);
   font-size: 18px;
-  overflow: hidden;
 }
