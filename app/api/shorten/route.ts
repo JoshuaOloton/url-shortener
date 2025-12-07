@@ -1,4 +1,4 @@
-export async function GET(request: Request) {
+export async function GET() {
   return Response.json({
     message: "This is a placeholder GET response from /api/shorten",
   });
@@ -39,6 +39,6 @@ export async function POST(request: Request) {
 
     return Response.json({ shortenedUrl });
   } catch (error) {
-    return Response.json({ error: "Server error" }, { status: 500 });
+    return Response.json({ error: `Server error: ${error}` }, { status: 500 });
   }
 }

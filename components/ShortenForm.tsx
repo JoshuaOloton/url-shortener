@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react"
+import { use, useEffect, useState } from "react"
 
 import Button from "./Button"
 import UrlBox from "./UrlBox";
@@ -12,16 +12,23 @@ interface UrlShape {
 
 const ShortenForm = () => {
 
+  const [mounted, setMounted] = useState<boolean>(false);
+
   const [input, setInput] = useState<string>("");
   const [results, setResults] = useState<UrlShape[]>([]);
   const [error, setError] = useState<string>("");
 
   useEffect(() => {
-    const storedResults = localStorage.getItem("shortenedUrls");
-    if (storedResults) {
-      setResults(JSON.parse(storedResults));
-    }
+    setMounted(true);
   }, []);
+
+  useEffect(() => {
+    if (!mounted) return;
+    const stored = localStorage.getItem("shortenedUrls");
+    if (stored) {
+      setResults(JSON.parse(stored));
+    }
+  }, [mounted]);
 
   useEffect(() => {
     console.log("Results changed:", results);

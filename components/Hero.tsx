@@ -8,7 +8,7 @@ const Hero = () => {
       </div>
       <div className="text-left">
         <h3 className="text-gray900 font-bold text-4xl mt-6 mb-2">More than just shorter links</h3>
-        <p className="text-sm md:text-base text-gray500 leading-relaxed font-medium py-6">Build your brand's recognition and get detailed insights on how your links are performing.</p>
+        <p className="text-sm md:text-base text-gray500 leading-relaxed font-medium py-6">Build your brand&lsquo;s recognition and get detailed insights on how your links are performing.</p>
         <Button classname="rounded-3xl">Get Started</Button>
       </div>
     </div>
