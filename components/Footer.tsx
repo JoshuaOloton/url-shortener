@@ -1,9 +1,12 @@
+import { socialIcons } from "@/app/data";
+import SocialIcon from "./SocialIcon";
+
 const Footer = () => {
   return (
-    <footer className="bg-purple950 text-white py-16">
+    <footer className="bg-gray950 text-white py-16">
       <div className="max-w-6xl mx-auto px-6 md:px-10">
-        <div className="flex flex-col items-center space-y-12">
-          <h1 className="text-3xl font-bold">Shortly</h1>
+        <div className="flex flex-col lg:flex-row lg:justify-between items-center lg:items-start gap-14 space-y-12">
+          <h1 className="text-3xl font-bold flex-1 text-left">Shortly</h1>
 
           <div className="flex flex-col md:flex-row md:space-x-24 text-center md:text-left space-y-12 md:space-y-0">
             <div>
@@ -76,18 +79,9 @@ const Footer = () => {
           </div>
 
           <div className="flex space-x-8 text-white">
-            <a href="#">
-              <img className="w-6 h-6" src="/assets/icon-facebook.svg" alt="Facebook" />
-            </a>
-            <a href="#">
-              <img className="w-6 h-6" src="/assets/icon-twitter.svg" alt="Twitter" />
-            </a>
-            <a href="#">
-              <img className="w-6 h-6" src="/assets/icon-pinterest.svg" alt="Pinterest" />
-            </a>
-            <a href="#">
-              <img className="w-6 h-6" src="/assets/icon-instagram.svg" alt="Instagram" />
-            </a>
+            {socialIcons.map((icon, index) => 
+              <SocialIcon key={index} icon={icon.icon} alt={icon.alt} href={icon.href} />
+            )}
           </div>
         </div>
       </div>

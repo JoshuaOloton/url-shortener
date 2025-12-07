@@ -16,4 +16,27 @@ const statisticsData = [
     }
 ];
 
-export { statisticsData }
+const socialIcons = [
+    {
+        icon: "/assets/icon-facebook.svg",
+        alt: "Facebook",
+        href: "#"
+    },
+    {
+        icon: "/assets/icon-twitter.svg",
+        alt: "Twitter",
+        href: "#"
+    },
+    {
+        icon: "/assets/icon-pinterest.svg",
+        alt: "Pinterest",
+        href: "#"
+    },
+    {
+        icon: "/assets/icon-instagram.svg",
+        alt: "Instagram",
+        href: "#"
+    }
+];
+
+export { statisticsData, socialIcons }
