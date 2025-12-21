@@ -19,16 +19,11 @@ const ShortenForm = () => {
   const [error, setError] = useState<string>("");
 
   useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  useEffect(() => {
-    if (!mounted) return;
     const stored = localStorage.getItem("shortenedUrls");
     if (stored) {
       setResults(JSON.parse(stored));
     }
-  }, [mounted]);
+  }, []);
 
   useEffect(() => {
     console.log("Results changed:", results);
