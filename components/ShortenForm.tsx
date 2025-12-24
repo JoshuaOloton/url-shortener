@@ -24,7 +24,6 @@ const ShortenForm = () => {
   }, []);
 
   useEffect(() => {
-    console.log("Results changed:", results);
     localStorage.setItem("shortenedUrls", JSON.stringify(results));
   }, [results]);
 
