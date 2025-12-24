@@ -3,13 +3,15 @@
 import { Menu, X } from "lucide-react"
 import { useState } from "react";
 import Button from "./Button";
+import Image from "next/image";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <header>
       <div className="flex justify-between md:justify-start md:gap-8 items-center py-6 w-5/6 max-w-7xl m-auto">
-        <img className="w-24 h-7" src="/assets/logo.svg" alt="Logo" />
+        {/* <img className="w-24 h-7" src="/assets/logo.svg" alt="Logo" /> */}
+        <Image src="/assets/logo.svg" alt="Logo" width={96} height={28} className=""/>
         {/* Desktop Nav */}
         <ul className="hidden md:flex items-center gap-6 flex-1">
           <li className="nav-link">Features</li>

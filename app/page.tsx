@@ -6,7 +6,7 @@ import Statistics from "@/components/Statistics";
 
 export default function Home() {
   return (
-    <div className="m-auto text-center">
+    <div className="m-auto text-center overflow-hidden">
       <Hero />
       <ShortenForm />
       <Statistics />
